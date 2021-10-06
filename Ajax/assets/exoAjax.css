@@ -11,6 +11,9 @@ body #imgContainer {
       -ms-flex-pack: center;
           justify-content: center;
   padding: 2rem;
+  width: 60%;
+  height: 25rem;
+  margin-left: 20%;
 }
 
 body #quote {
