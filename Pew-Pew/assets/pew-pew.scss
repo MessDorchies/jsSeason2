@@ -1,0 +1,68 @@
+
+body{
+    background-color: black;
+    margin: 0%;
+    font-size: 20px;
+    .utility{
+        display: flex;
+        text-align: center;
+        padding-bottom: 1rem;
+        width: 100%;
+        color: whitesmoke;
+        .score{
+            justify-content: flex-start;
+            width: 40%;
+            height: 4rem;
+            border: solid silver;
+            border-collapse: collapse;
+            border-width: thin;
+        }
+        .timer{
+            justify-content: flex-end;
+            width: 40%;
+            height: 4rem;
+            border: solid silver;
+            border-collapse: collapse;
+            border-width: thin;
+        }
+        .buttonContainer{
+            width: 20%;
+            height: 4rem;
+            border: solid silver;
+            border-collapse: collapse;
+            border-width: thin;
+            .start{
+                background-color: black;
+                border: solid silver;
+                border-width: thin;
+                color: whitesmoke;
+                margin-left: 1rem;
+                width: 4rem;
+                height: 4rem;
+                border-radius: 50%;
+                text-align: center;
+            }
+            .restart{
+                background-color: black;
+                border: solid silver;
+                border-width: thin;
+                color: whitesmoke;
+                margin-left: 9rem;
+                width: 4rem;
+                height: 4rem;
+                border-radius: 50%;
+                text-align: center;
+            }
+        }  
+    }
+    .main{
+        width: 100%;
+        height: auto;
+        .gameField{
+            background-color: white;
+            margin-left: 30%;
+        }
+    }
+    
+}
+
