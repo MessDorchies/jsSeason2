@@ -11,7 +11,7 @@ let imgContainer = document.getElementById("imgContainer");
 getQuote().catch(async error => console.error(error)).then(quote => {
     quoteContent.innerHTML = JSON.stringify(quote.quote);
     authorContent.innerHTML = JSON.stringify(quote.author);
-    imgContainer.innerHTML = '<img src =" ' + quote.photo + '">'
+    imgContainer.innerHTML = '<img src ="' + quote.photo + '" alt="' + quote.slug + '" >'
     
 });
 console.log(getQuote());
