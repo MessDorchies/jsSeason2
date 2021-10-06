@@ -1,0 +1,30 @@
+body {
+  background-color: black;
+  color: silver;
+}
+
+body #imgContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 2rem;
+}
+
+body #quote {
+  border: solid silver;
+  text-align: center;
+  font-style: italic;
+  font-size: large;
+  margin: 2rem;
+  padding: 2rem;
+}
+
+body #author {
+  text-align: center;
+  margin: 2rem;
+  padding: 2rem;
+}
+/*# sourceMappingURL=exoAjax.css.map */

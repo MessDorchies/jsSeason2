@@ -1,0 +1,25 @@
+body{
+    background-color: black;
+    color: silver;
+
+    #imgContainer{
+
+        display: flex;
+        justify-content: center;
+        padding: 2rem;
+    }
+    #quote{
+
+        border: solid silver;
+        text-align: center;
+        font-style: italic;
+        font-size: large;
+        margin: 2rem;
+        padding: 2rem;
+    }
+    #author{
+        text-align: center;
+        margin: 2rem;
+        padding: 2rem;
+    }
+}
