@@ -45,7 +45,7 @@ class Projectile {
     }
 }
 
-class Enemie {
+class Target {
     constructor(x,y,radius, color, velocity){
         this.x = x;
         this.y = y;
@@ -70,7 +70,7 @@ class Enemie {
 
 const player = new Player(25,'red');
 const projectiles = [];
-const enemies = [];
+const targets = [];
 
 function spawn(){
     setInterval(() => {
@@ -83,7 +83,7 @@ function spawn(){
             x : Math.cos(angle),
             y : Math.sin(angle)
         }
-        enemies.push(new Enemie(x,y,radius,color,velocity))
+        targets.push(new Target(x,y,radius,color,velocity))
 
     },1000)
 }
@@ -102,26 +102,26 @@ function animate(){
     projectiles.forEach((projectile) => {
         projectile.move()
     });
-    enemies.forEach((enemy,index) =>{
-        enemy.move()
-        const distance = Math.hypot(player.x - enemy.x, player.y - enemy.y);
-        if((distance - enemy.radius - player.radius) < 1){
+    targets.forEach((target,index) =>{
+        target.move()
+        const distance = Math.hypot(player.x - target.x, player.y - target.y);
+        if((distance - target.radius - player.radius) < 1){
             life--;
             setTimeout(() => {
-            enemies.splice(index,1)
+            targets.splice(index,1)
             },0)
             if (life === 0){
                 gameOn = false;
             }
         }
         projectiles.forEach((projectile, projIndex) => {
-            const distance = Math.hypot(projectile.x - enemy.x, projectile.y - enemy.y);
-            if( (distance - enemy.radius - projectile.radius) < 1){
+            const distance = Math.hypot(projectile.x - target.x, projectile.y - target.y);
+            if( (distance - target.radius - projectile.radius) < 1){
                 score+=10;
                 scoreCont.innerHTML = "Your current score : " + score;
                 console.log(score);
                 setTimeout(() => {
-                    enemies.splice(index,1);
+                    targets.splice(index,1);
                     projectiles.splice(projIndex,1)
                 }, 0)
             }
